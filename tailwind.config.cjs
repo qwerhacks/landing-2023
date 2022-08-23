@@ -9,6 +9,7 @@ const config = {
 			fontFamily: {
 				nighty: ["Nighty DEMO", "serif"],
 				ranille: ["Ranille Normal", "serif"],
+				nunito: ["Nunito", "sans"]
 			},
 			colors: {
 				lightblue: {

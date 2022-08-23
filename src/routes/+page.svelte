@@ -3,11 +3,11 @@
 import Hero from '$lib/components/hero.svelte';
 </script>
 
-<div class="overscroll-contain overflow-hidden w-full h-full">
+<div class="w-full h-full overflow-hidden overscroll-contain">
 	<div id="background" class="absolute w-full h-full -z-10" >
 		<Background />
 	</div>
-	<div id="content" class="w-full h-full flex flex-col justify-center items-center z-10 p-10">
+	<div id="content" class="z-10 flex flex-col items-center justify-center w-screen h-screen p-10">
 		<Hero />
 	</div>
 </div>
