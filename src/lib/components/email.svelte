@@ -10,7 +10,7 @@
 
 		try {
 			const resp = await fetch(
-				'/api/emil?' +
+				'/api/email?' +
 					new URLSearchParams({
 						email: text
 					}),
