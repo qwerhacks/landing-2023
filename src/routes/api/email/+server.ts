@@ -14,16 +14,19 @@ export async function POST({url}: RequestEvent): Promise<Response> {
   console.log(token)
 
   if (email === null || !EmailValidator.validate(email)) {
+    console.error("Email not provided or failed to validate")
     throw error(400, "Please provide a valid email")
   }
 
   if (token === null) {
+    console.error("No recaptcha token provied")
     throw error(400, "Please provide a recatpcha token")
   } else {
     const resp = await validateCaptcha(token);
     console.log(resp)
     // If we should fail...
     if (resp.score < 0.6 || resp.action != "submit") {
+      console.error("Recaptcha token failed to validate")
       throw error(500, "Internal server error")
     }
   }
@@ -42,12 +45,7 @@ export async function POST({url}: RequestEvent): Promise<Response> {
   await doc.loadInfo();
 
   const sheet = doc.sheetsByIndex[0];
-
-  console.log({sheet})
-
-  const row = await sheet.addRow({ email });
-
-  console.log({row})
+  await sheet.addRow({ email });
 
   return new Response("Ok");
 }
