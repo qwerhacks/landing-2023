@@ -53,7 +53,7 @@
 </script>
 
 <form
-	class="flex flex-row w-full max-w-[40ch] lg:max-w-[50ch] xl:max-w-[65ch] relative justify-between gap-8"
+	class="flex flex-row w-full max-w-[40ch] lg:max-w-[50ch] xl:max-w-[65ch] relative justify-between gap-6 md:gap-8"
 	on:submit|preventDefault={submitHandler}
 >
 	{#if error === undefined && !success}
@@ -65,11 +65,11 @@
 			style="border-radius:50px"
 		/>
 		{#if !loading }
-			<button type="submit" id="submit" class="px-3 py-3 hidden md:block" style="border-radius:100%;aspect-ratio:1/1;width:50px;height:50px;background:#05034a">
+			<button type="submit" id="submit" class="px-3 py-3 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]" style="border-radius:100%;aspect-ratio:1/1;background:#05034a">
 				<img src={Arrow}/>
 			</button>
 		{:else}
-			<button disabled type="submit" id="submit" class="px-2 py-2 hidden md:block" style="border-radius:100%;aspect-ratio:1/1;width:50px;height:50px;background:#05034a">
+			<button disabled type="submit" id="submit" class="px-2 py-2" style="border-radius:100%;aspect-ratio:1/1;width:50px;height:50px;background:#05034a">
 				<Circle2 size="30" colorOuter="#fff" colorCenter="#fff" colorInner="#fff"/>
 			</button>
 		{/if}
