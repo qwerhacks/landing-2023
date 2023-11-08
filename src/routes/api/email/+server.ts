@@ -3,9 +3,6 @@ import type { RequestEvent } from "./$types";
 import * as EmailValidator from 'email-validator';
 import { SERVICE_ACCT_EMAIL, PRIVATE_KEY } from '$env/static/private';
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import { validateCaptcha } from '$lib/captchaValidator';
-import { PrismaClient } from '@prisma/client';
-
 
 const SHEET_ID = "1ANWHf_xTo6Fjv9LgMGJ48MqUS0xnj6PwYmE16zwW3ts"
 
