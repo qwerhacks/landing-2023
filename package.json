@@ -37,7 +37,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@prisma/client": "^5.5.2",
+		"@vercel/postgres": "^0.5.1",
 		"email-validator": "^2.0.4",
-		"google-spreadsheet": "^3.3.0"
+		"google-spreadsheet": "^3.3.0",
+		"prisma": "^5.5.2"
 	}
 }

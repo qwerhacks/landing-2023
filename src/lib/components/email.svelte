@@ -13,42 +13,34 @@
 	async function submitHandler(e: Event) {
 		console.log('Submitted');
 		loading = true;
-		grecaptcha.ready(function () {
-			console.log('recaptcha ready');
-			grecaptcha
-				.execute('6LdT9hkiAAAAAM1maiWvJtgGAKTBfSYorsZ-IBV3', { action: 'submit' })
-				.then(async function (token: string) {
-					console.log('Recaptcha Callback');
-					try {
-						const resp = await fetch(
-							'/api/email?' +
-								new URLSearchParams({
-									email: text,
-									token
-								}),
-							{
-								method: 'POST'
-							}
-						);
+		
+		try {
+			const resp = await fetch(
+				'/api/email?' +
+					new URLSearchParams({
+						email: text,
+					}),
+				{
+					method: 'POST'
+				}
+			);
 
-						if (resp.ok) {
-							success = true;
-							loading = false;
-						} else {
-							error = await resp.text();
-							success = false;
-							loading = false;
-						}
-					} catch (err) {
-						let message = 'Unknown Error';
-						if (err instanceof Error) message = err.message;
-						error = message;
-						success = false;
-						loading = false;
-					}
-					console.error(error);
-				});
-		});
+			if (resp.ok) {
+				success = true;
+				loading = false;
+			} else {
+				error = await resp.text();
+				success = false;
+				loading = false;
+			}
+		} catch (err) {
+			let message = 'Unknown Error';
+			if (err instanceof Error) message = err.message;
+			error = message;
+			success = false;
+			loading = false;
+		}
+		console.error(error);
 	}
 </script>
 

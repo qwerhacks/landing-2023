@@ -18,7 +18,6 @@ interface SiteVerifyResponse {
 }
 
 export async function validateCaptcha(token: string): Promise<SiteVerifyResponse> {
-	console.log(`Secret: ${RECAPTCHA_SECRET}`);
 	const res = await fetch(
 		'https://www.google.com/recaptcha/api/siteverify',
 		{
