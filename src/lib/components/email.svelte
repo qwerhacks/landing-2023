@@ -75,7 +75,7 @@
 		{/if}
 	{:else if success}
 		<div>
-			<p class="text-center font-nunito">
+			<p class="text-center font-reactor7 text-whit text-2xl lg:text-5xl ">
 				Thank you! Please keep an eye on your email for more info.
 			</p>
 		</div>
