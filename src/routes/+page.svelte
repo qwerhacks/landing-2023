@@ -9,7 +9,7 @@
 		<div id="bg-overlay" class="absolute w-full h-full" style="z-index:100;background:#491b55;opacity:0.5;mix-blend-mode:dodge"/>
 		<Background />
 	</div>
-	<div id="content" class="z-10 flex flex-col items-center justify-center w-screen h-screen p-10">
+	<div id="content" class="z-10 flex flex-col items-center justify-center w-screen h-screen">
 		<Hero />
 	</div>
 </div>

@@ -6,7 +6,7 @@
 <div id="logo-parent" class="w-full flex flex-col md:flex-row">
 	<div id="image" class="flex grow-[1] items-center justify-center flex-col">
 		<span class="ucla">@UCLA</span>
-		<img src={Deadjim} alt="QWERHACKS Logo" class="w-10/12 md:w-11/12 h-11/12"/>
+		<img src={Deadjim} alt="QWERHACKS Logo" class="w-[120%] max-w-[120%] md:max-w-full md:w-11/12 h-full"/>
 		<span class="date">JAN 27-29, 2024</span>
 	</div>
 </div>
@@ -35,7 +35,7 @@
 	}
 	span {
 		font-family: 'Fredoka', sans-serif;
-		font-size: 3.5vw;
+		font-size: max(3.5vw, 1.4rem);
 		color: white;
 	}
 	.ucla {
