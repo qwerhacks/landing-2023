@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Arrow from "$lib/media/arrow.svg";
   import { Circle2, Circle } from 'svelte-loading-spinners'
 
 	let text: string = '';
@@ -52,7 +53,7 @@
 </script>
 
 <form
-	class="w-full max-w-[40ch] lg:max-w-[50ch] xl:max-w-[65ch] relative"
+	class="flex flex-row w-full max-w-[40ch] lg:max-w-[50ch] xl:max-w-[65ch] relative justify-between gap-8"
 	on:submit|preventDefault={submitHandler}
 >
 	{#if error === undefined && !success}
@@ -60,15 +61,17 @@
 			bind:value={text}
 			type="email"
 			placeholder="Enter your email for updates"
-			class="w-full px-3 py-2 leading-tight text-gray-900 bg-transparent border-b border-gray-900 appearance-none font-nunito lg:text-2xl xl:text-4xl focus:shadow-outline"
+			class="w-full px-5 py-2 leading-tight text-gray-900 bg-white appearance-none font-reactor7 lg:text-2xl xl:text-4xl focus:shadow-outline"
+			style="border-radius:50px"
 		/>
-		{#if loading }
-		<div class="absolute right-2 top-0 bottom-0 my-auto h-[80%]">
-			<div class="static">
-				<!-- <Circle size="60" color="#59C6D7"/> -->
-				<Circle2 size="30" colorOuter="#59C6D7" colorCenter="#AAD6A1" colorInner="#FDDE97"/>
-			</div>
-		</div>
+		{#if !loading }
+			<button type="submit" id="submit" class="px-3 py-3" style="border-radius:100%;aspect-ratio:1/1;width:50px;height:50px;background:#05034a">
+				<img src={Arrow}/>
+			</button>
+		{:else}
+			<button disabled type="submit" id="submit" class="px-3 py-3" style="border-radius:100%;aspect-ratio:1/1;width:50px;height:50px;background:#05034a">
+				<Circle2 size="30" colorOuter="#fff" colorCenter="#fff" colorInner="#fff"/>
+			</button>
 		{/if}
 	{:else if success}
 		<div>
@@ -81,3 +84,14 @@
 		<div class="max-h-[7ch] overflow-scroll">Error: {error}</div>
 	{/if}
 </form>
+
+<style>
+	@import url(https://db.onlinewebfonts.com/c/3101d0058e2d7317cd5a5af7a1216ff3?family=Reactor7); 
+	input::placeholder {
+		text-align: center;
+		font-family: 'Reactor7', monospace;
+	}
+	input, button {
+		outline: solid 8px #05034a;
+	}
+</style>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            body {
+                background: purple;
+            }
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .inner {
+                font-size: 5rem;
+                font-family: sans-serif;
+                color: white;
+                /*text-shadow: darkblue 8px 8px 0px, darkblue -8px 8px 0px, darkblue 8px -8px 0px;*/
+                
+                user-select: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero {
+                display: grid;
+                grid-template-areas: "zero";
+                min-height: 0;
+                grid-template-columns: 1fr;
+                grid-template-columns: 1fr;
+            }
+            .front {
+                grid-area: zero;
+                z-index: 1000;
+            }
+            .back {
+                -webkit-text-stroke-color: red;
+                -webkit-text-stroke-width: 30px;
+                grid-area: zero;
+                position: relative;
+                left: 20px;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div class="inner">
+                <div class="hero">
+                    <span class="front">QWERHACKS</span>
+                    <span class="back">QWERHACKS</span>
+                </div>
+                <input type="text" placeholder="Enter your email here..." />
+            </div>
+        </div>
+    </body>
+</html> 

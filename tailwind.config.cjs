@@ -9,9 +9,13 @@ const config = {
 			fontFamily: {
 				nighty: ["Nighty DEMO", "serif"],
 				ranille: ["Ranille Normal", "serif"],
-				nunito: ["Nunito", "sans"]
+				reactor7: ["Reactor7", "mono"],
+				deadjim: ["DeadJim", "sans-serif"],
 			},
 			colors: {
+				darkblue: {
+					DEFAULT: "#05034A",
+				},
 				lightblue: {
 					light: "#88AEDC",
 					DEFAULT: "#4079BD"
