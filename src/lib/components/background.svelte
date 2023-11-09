@@ -7,6 +7,7 @@
 </script>
 
 <div class="w-full h-full bg-[#491b55]">
+  <div id="bg-overlay" class="fixed left-0 top-0 w-full h-full" style="z-index:100;background:#491b55;opacity:0.5;mix-blend-mode:dodge"/>
   <img src={BottomLeft} alt="" class="fixed left-0 bottom-0 z-10 max-w-screen max-h-[70vh] md:max-w-[82vw]"/>
   <img src={TopRight} alt="" class="fixed right-0 top-0 max-w-[60vw] md:max-w-[40vw]"/>
   <img src={TopLeft} alt="" class="fixed top-0 left-0 max-w-[60vw] md:max-w-[55vw]"/>
