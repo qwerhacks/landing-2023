@@ -14,26 +14,6 @@ export async function POST({url}: RequestEvent): Promise<Response> {
     throw error(400, "Please provide a valid email")
   }
 
-  // if (token === null) {
-  //   console.error("No recaptcha token provied")
-  //   throw error(400, "Please provide a recatpcha token")
-  // } else {
-  //   const resp = await validateCaptcha(token);
-  //   console.log(resp)
-  //   // If we should fail...
-  //   if (resp.score < 0.6 || resp.action != "submit") {
-  //     console.error("Recaptcha token failed to validate")
-  //     throw error(500, "Internal server error")
-  //   }
-  // }
-
-  // const prisma = new PrismaClient();
-  // const res = await prisma.userEntry.create({
-  //   data: {
-  //     email: email
-  //   }
-  // })
-
   const doc = new GoogleSpreadsheet(SHEET_ID);
 
   await doc.useServiceAccountAuth({

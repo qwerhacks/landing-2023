@@ -25,9 +25,6 @@ devDependencies:
   '@types/google-spreadsheet':
     specifier: ^3.3.0
     version: 3.3.2
-  '@types/grecaptcha':
-    specifier: ^3.0.4
-    version: 3.0.6
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.27.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.52.0)(typescript@4.9.5)
@@ -321,10 +318,6 @@ packages:
 
   /@types/google-spreadsheet@3.3.2:
     resolution: {integrity: sha512-uBwRhNwx5JPsmrV+XmD77dxL8vVdOY/Aba1kx/mxtR6jePLZIN06I1jjEXEFidAyLUz+JWCphsVk8CCJ2Kzy2w==}
-    dev: true
-
-  /@types/grecaptcha@3.0.6:
-    resolution: {integrity: sha512-4BR/3v+pbiRt3cwRwibFnV4+LmuvRUjVVqgeCul9ODAyQhlPKE4tIIRJwZUeWWpmX8e9vo/xXuQTQl8FJPP7KA==}
     dev: true
 
   /@types/json-schema@7.0.14:
