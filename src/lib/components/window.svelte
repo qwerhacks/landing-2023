@@ -1,7 +1,15 @@
 <script>
 	let closescreen = true;
+	let rounded = true;
+
+	//Shadow stuff
 	let shadow = true;
-	let rounded = false;
+	let rightshadow = false;
+	let topshadow = false;
+	let xshadowoffset = '10px';
+	xshadowoffset = rightshadow ? xshadowoffset : '-' + xshadowoffset;
+	let yshadowoffset = '10px';
+	yshadowoffset = topshadow ? yshadowoffset : '-' + yshadowoffset;
 
 	const deadline = new Date(2024, 1, 2);
 	const start = new Date(2023, 8, 1);
@@ -24,6 +32,7 @@
 		id="frontwindow"
 		class="flex-auto border-4 border-solid border-[#200b3a] outline-[#200b3a] 
         {rounded ? 'rounded-lg' : ''} frontwindow"
+		style="right: {xshadowoffset}; top: {yshadowoffset};"
 	>
 		<div
 			id="colored background"
@@ -139,8 +148,6 @@
 	}
 	.frontwindow {
 		position: relative;
-		right: -10px;
-		top: -10px;
 		z-index: 2;
 	}
 </style>
